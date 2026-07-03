@@ -41,6 +41,38 @@ a {
   color: inherit;
 }
 
+.github-link {
+  align-items: center;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: inline-flex;
+  height: 42px;
+  justify-content: center;
+  position: fixed;
+  right: 28px;
+  top: 24px;
+  width: 42px;
+  z-index: 10;
+}
+
+.github-link:hover {
+  border-color: var(--accent-dark);
+  color: var(--accent-dark);
+}
+
+.github-link:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  outline-offset: 3px;
+}
+
+.github-link svg {
+  display: block;
+  fill: currentColor;
+  height: 22px;
+  width: 22px;
+}
+
 .hero {
   align-items: center;
   display: grid;
@@ -252,6 +284,11 @@ footer {
 }
 
 @media (max-width: 520px) {
+  .github-link {
+    right: 16px;
+    top: 16px;
+  }
+
   .hero,
   .section-grid,
   .install,
