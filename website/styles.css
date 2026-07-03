@@ -8,6 +8,18 @@
   --accent-dark: #8d4427;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f3efe6;
+    --muted: #b9b1a4;
+    --paper: #11100e;
+    --panel: #1b1916;
+    --line: #3a352e;
+    --accent: #d08a58;
+    --accent-dark: #e2aa7d;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -20,6 +32,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
+  color-scheme: light dark;
   font-family: Avenir Next, Avenir, Helvetica Neue, Helvetica, sans-serif;
   line-height: 1.5;
 }
@@ -155,6 +168,16 @@ p {
 
 .install:target {
   background: #ebe6da;
+}
+
+@media (prefers-color-scheme: dark) {
+  .button-primary {
+    color: #11100e;
+  }
+
+  .install:target {
+    background: #181511;
+  }
 }
 
 .install-steps {
