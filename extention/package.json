@@ -1,0 +1,8 @@
+{
+  "name": "@tabguard/extention",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "check": "node --check src/background.js && node --check src/content.js && node --check popup.js"
+  }
+}

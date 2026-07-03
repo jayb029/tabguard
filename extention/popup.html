@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabguard</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup">
+      <header>
+        <span class="mark" aria-hidden="true">T</span>
+        <div>
+          <h1>Tabguard</h1>
+          <p id="statusText">Checking this tab...</p>
+        </div>
+      </header>
+
+      <div class="actions">
+        <button class="primary" id="protectButton" type="button">Protect this tab</button>
+        <button class="secondary" id="disableButton" type="button">Disable</button>
+      </div>
+
+      <p class="note" id="note">
+        Chrome shows its own confirmation text. Interact with the page once after arming.
+      </p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+:root {
+  --ink: #1c1b18;
+  --muted: #625f57;
+  --paper: #f7f5ef;
+  --panel: #fffdf8;
+  --line: #d7d0c1;
+  --accent: #c96f43;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Avenir Next, Avenir, Helvetica Neue, Helvetica, sans-serif;
+  margin: 0;
+  width: 320px;
+}
+
+.popup {
+  padding: 16px;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.mark {
+  align-items: center;
+  background: var(--ink);
+  border-radius: 7px;
+  color: var(--paper);
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-weight: 700;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.actions {
+  display: grid;
+  gap: 8px;
+}
+
+button {
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  min-height: 40px;
+  padding: 0 12px;
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.primary {
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  color: var(--paper);
+}
+
+.secondary {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.note {
+  border-top: 1px solid var(--line);
+  margin-top: 14px;
+  padding-top: 12px;
+}

@@ -1,0 +1,13 @@
+{
+  "name": "tabguard-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "website",
+    "extention"
+  ],
+  "scripts": {
+    "dev": "npm --workspace website run dev",
+    "check": "npm --workspace website run check && npm --workspace extention run check"
+  }
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabguard</title>
+    <meta
+      name="description"
+      content="Tabguard is a Chrome extension that asks before closing protected tabs."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <h1 id="page-title">Stop losing the tab you meant to keep.</h1>
+          <p>
+            Tabguard adds a deliberate close confirmation to the tab you choose. Arm it from
+            the extension popup, then Chrome asks before the protected page closes, reloads,
+            or navigates away.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="#install">Get Tabguard</a>
+            <button class="button button-secondary" type="button" id="demoButton">
+              Protect this demo tab
+            </button>
+          </div>
+          <p class="demo-status" id="demoStatus" role="status">
+            Demo is off. Turn it on and try reloading this page.
+          </p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <img src="assets/tabguard-lock.svg" alt="">
+        </div>
+      </section>
+
+      <section class="section-grid" id="how-it-works" aria-labelledby="how-heading">
+        <div>
+          <h2 id="how-heading">A simple tab-level guard</h2>
+          <p>
+            Click Tabguard while you are on a page that matters. The extension injects a
+            lightweight listener into that tab only, so other tabs keep behaving normally.
+          </p>
+        </div>
+        <ol class="steps">
+          <li>
+            <strong>Open a tab.</strong>
+            Use any regular website page you want to protect.
+          </li>
+          <li>
+            <strong>Arm Tabguard.</strong>
+            Choose Protect this tab from the extension popup.
+          </li>
+          <li>
+            <strong>Confirm exits.</strong>
+            Chrome asks before close, reload, or navigation can finish.
+          </li>
+        </ol>
+      </section>
+
+      <section class="install" id="install" aria-labelledby="install-heading">
+        <div>
+          <h2 id="install-heading">Install from GitHub</h2>
+          <p>
+            Download the repository, then load the extension folder in Chrome.
+            Tabguard runs locally from the files you install.
+          </p>
+        </div>
+        <ol class="install-steps" aria-label="Repository install steps">
+          <li>
+            <strong>Get the repo.</strong>
+            Open the Tabguard GitHub repository and choose Download ZIP, or clone it
+            with Git. If you download the ZIP, extract it before continuing.
+          </li>
+          <li>
+            <strong>Open Chrome extensions.</strong>
+            Go to chrome://extensions and turn on Developer mode.
+          </li>
+          <li>
+            <strong>Load the extension.</strong>
+            Click Load unpacked and select the extention folder from the repo.
+          </li>
+        </ol>
+      </section>
+
+      <section class="section-grid" id="limits" aria-labelledby="limits-heading">
+        <div>
+          <h2 id="limits-heading">What Chrome controls</h2>
+          <p>
+            The close confirmation is Chrome's native dialog. For security and usability,
+            pages and extensions cannot customize the warning text.
+          </p>
+        </div>
+        <ul class="detail-list">
+          <li>Works on normal web pages, not internal pages like chrome://extensions.</li>
+          <li>The page must receive user interaction before Chrome will show the dialog.</li>
+          <li>Protection is per tab and can be disabled from the same popup.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <span>Tabguard</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

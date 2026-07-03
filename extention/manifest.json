@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Tabguard",
+  "version": "0.1.0",
+  "description": "Ask Chrome to confirm before closing protected tabs.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_title": "Tabguard",
+    "default_popup": "popup.html"
+  }
+}
